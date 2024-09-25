@@ -257,12 +257,15 @@ cmp_error_output invalid2-1 "error: line 2 is not valid$"
 cmp_error_output invalid2-2 "error: line 3 is not valid$"
 cmp_error_output invalid2-3 "error: line 4 is not valid$"
 cmp_error_output invalid2-4 "error: line 5 is not valid$"
+cmp_error_output invalid2-5 "error: line 4 is not valid$"
 cmp_error_output invalid3 "error: invalid number of islands$"
 cmp_error_output invalid5 "error: duplicate bridges$"
 cmp_error_output invalid6 "error: sum of bridges lengths is too big$"
 cmp_error_output invalid_long_num "error: line 3 is not valid$"
 cmp_error_output invalid_long_num1 "error: line 1 is not valid$"
 cmp_error_output invalid-small "error: invalid number of islands$"
+cmp_error_output invalid7 "error: line 3 is not valid$"
+cmp_error_output invalid7-1 "error: line 3 is not valid$"
 cmp_output path "$path_output"
 cmp_output path1 "$path1_output"
 cmp_output small1 "$small1_output"
@@ -295,4 +298,7 @@ cmp_valgrind_output weird1
 cmp_valgrind_output small1
 cmp_valgrind_output small2
 cmp_valgrind_output medium
+cmp_valgrind_output invalid7
+cmp_valgrind_output invalid7-1
+cmp_valgrind_output invalid2-5
 
