@@ -9,12 +9,12 @@ cmp_error_output()
     if [ "$output" == "$error_string" ]; then
         echo "Error output matches."
     else
-        echo "============================"
+        echo "****************************"
         echo "Error output does not match."
         echo "Output: ${output}"
         echo "Input file: ${filename}"
         echo "Expected: ${error_string}"
-        echo "============================"
+        echo "****************************"
     fi
 }
 
@@ -27,12 +27,37 @@ cmp_output()
     if [ "$output" == "$output_string" ]; then
         echo "Output matches."
     else
-        echo "============================"
+        echo "$output_string" > answer_buffer.txt
+        echo "$output" > buffer.txt
+        difference=$(diff buffer.txt answer_buffer.txt)
+        echo "****************************"
         echo "Output does not match."
-        echo "Output: ${output}"
         echo "Input file: ${filename}"
-        echo "Expected: ${output_string}"
-        echo "============================"
+        echo "Difference: ${difference}"
+        echo "****************************"
+        rm -f answer_buffer.txt
+        rm -f buffer.txt
+    fi
+}
+
+cmp_output_to_file()
+{
+    filename=$1
+    answer_filename=$2
+    output=$(./pathfinder $filename | cat -e)
+    output_string=$(cat -e $answer_filename)
+
+    if [ "$output" == "$output_string" ]; then
+        echo "Output matches."
+    else
+        ./pathfinder $filename > buffer.txt
+        difference=$(diff buffer.txt $answer_filename)
+        echo "****************************"
+        echo "Output does not match."
+        echo "Input file: ${filename}"
+        echo "Difference: ${difference}"
+        echo "****************************"
+        rm -f buffer.txt
     fi
 }
 
@@ -47,188 +72,13 @@ cmp_valgrind_output()
     if [[ "$output" =~ "$expected_substring1" && "$output" =~ "$expected_substring2" ]]; then
         echo "No leaks"
     else
-        echo "============================"
+        echo "****************************"
         echo "Some leaks detected"
         echo "Input file: ${filename}"
-        echo "============================"
+        echo "****************************"
     fi
 }
 
-path_output="========================================
-Path: Greenland -> Bananal
-Route: Greenland -> Bananal
-Distance: 8
-========================================
-========================================
-Path: Greenland -> Fraser
-Route: Greenland -> Fraser
-Distance: 10
-========================================
-========================================
-Path: Greenland -> Java
-Route: Greenland -> Fraser -> Java
-Distance: 10 + 5 = 15
-========================================
-========================================
-Path: Bananal -> Fraser
-Route: Bananal -> Fraser
-Distance: 3
-========================================
-========================================
-Path: Bananal -> Java
-Route: Bananal -> Fraser -> Java
-Distance: 3 + 5 = 8
-========================================
-========================================
-Path: Fraser -> Java
-Route: Fraser -> Java
-Distance: 5
-========================================"
-
-path1_output="========================================
-Path: A -> B
-Route: A -> B
-Distance: 11
-========================================
-========================================
-Path: A -> C
-Route: A -> C
-Distance: 10
-========================================
-========================================
-Path: A -> D
-Route: A -> B -> D
-Distance: 11 + 5 = 16
-========================================
-========================================
-Path: A -> D
-Route: A -> C -> D
-Distance: 10 + 6 = 16
-========================================
-========================================
-Path: A -> E
-Route: A -> B -> D -> E
-Distance: 11 + 5 + 4 = 20
-========================================
-========================================
-Path: A -> E
-Route: A -> C -> D -> E
-Distance: 10 + 6 + 4 = 20
-========================================
-========================================
-Path: B -> C
-Route: B -> D -> C
-Distance: 5 + 6 = 11
-========================================
-========================================
-Path: B -> D
-Route: B -> D
-Distance: 5
-========================================
-========================================
-Path: B -> E
-Route: B -> D -> E
-Distance: 5 + 4 = 9
-========================================
-========================================
-Path: C -> D
-Route: C -> D
-Distance: 6
-========================================
-========================================
-Path: C -> E
-Route: C -> D -> E
-Distance: 6 + 4 = 10
-========================================
-========================================
-Path: D -> E
-Route: D -> E
-Distance: 4
-========================================"
-
-small1_output="========================================
-Path: Greenland -> Bananal
-Route: Greenland -> Bananal
-Distance: 8
-========================================
-========================================
-Path: Greenland -> Fraser
-Route: Greenland -> Fraser
-Distance: 10
-========================================
-========================================
-Path: Bananal -> Fraser
-Route: Bananal -> Fraser
-Distance: 3
-========================================"
-
-small2_output="========================================
-Path: Greenland -> Bananal
-Route: Greenland -> Bananal
-Distance: 8
-========================================"
-
-valid_long_paths_output="========================================
-Path: Greenland -> Bananal
-Route: Greenland -> Fraser -> Bananal
-Distance: 10 + 3 = 13
-========================================
-========================================
-Path: Greenland -> Fraser
-Route: Greenland -> Fraser
-Distance: 10
-========================================
-========================================
-Path: Greenland -> Java
-Route: Greenland -> Fraser -> Java
-Distance: 10 + 5 = 15
-========================================
-========================================
-Path: Bananal -> Fraser
-Route: Bananal -> Fraser
-Distance: 3
-========================================
-========================================
-Path: Bananal -> Java
-Route: Bananal -> Fraser -> Java
-Distance: 3 + 5 = 8
-========================================
-========================================
-Path: Fraser -> Java
-Route: Fraser -> Java
-Distance: 5
-========================================"
-
-valid_long_paths1_output="========================================
-Path: Greenland -> Bananal
-Route: Greenland -> Fraser -> Bananal
-Distance: 1000000000 + 3 = 1000000003
-========================================
-========================================
-Path: Greenland -> Fraser
-Route: Greenland -> Fraser
-Distance: 1000000000
-========================================
-========================================
-Path: Greenland -> Java
-Route: Greenland -> Fraser -> Java
-Distance: 1000000000 + 5 = 1000000005
-========================================
-========================================
-Path: Bananal -> Fraser
-Route: Bananal -> Fraser
-Distance: 3
-========================================
-========================================
-Path: Bananal -> Java
-Route: Bananal -> Fraser -> Java
-Distance: 3 + 5 = 8
-========================================
-========================================
-Path: Fraser -> Java
-Route: Fraser -> Java
-Distance: 5
-========================================"
 
 {
     output=$(./pathfinder empty empty 2>&1 | cat -e)
@@ -237,12 +87,12 @@ Distance: 5
     if [ "$output" == "$static_string" ]; then
         echo "Error output matches."
     else
-        echo "============================"
+        echo "****************************"
         echo "Error output does not match."
         echo "Output: ${output}"
         echo "Input file: empty"
         echo "Expected: ${static_string}"
-        echo "============================"
+        echo "****************************"
     fi
 }
 
@@ -266,12 +116,19 @@ cmp_error_output invalid_long_num1 "error: line 1 is not valid$"
 cmp_error_output invalid-small "error: invalid number of islands$"
 cmp_error_output invalid7 "error: line 3 is not valid$"
 cmp_error_output invalid7-1 "error: line 3 is not valid$"
-cmp_output path "$path_output"
-cmp_output path1 "$path1_output"
-cmp_output small1 "$small1_output"
-cmp_output small2 "$small2_output"
-cmp_output valid_long_paths "$valid_long_paths_output"
-cmp_output valid_long_paths1 "$valid_long_paths1_output"
+cmp_error_output invalid8 "error: line 5 is not valid$"
+cmp_error_output invalid8-1 "error: line 4 is not valid$"
+cmp_error_output invalid8-2 "error: line 4 is not valid$"
+cmp_output_to_file path path_answer.txt
+cmp_output_to_file path1 path1_answer.txt
+cmp_output_to_file small1 small1_answer.txt
+cmp_output_to_file small2 small2_answer.txt
+cmp_output_to_file valid_long_paths valid_long_paths_answer.txt
+cmp_output_to_file valid_long_paths1 valid_long_paths1_answer.txt
+cmp_output_to_file hardest hardest_answer.txt
+cmp_output_to_file hard hard_answer.txt
+cmp_output_to_file medium1 medium1_answer.txt
+cmp_output_to_file easy easy_answer.txt
 
 echo "Leaks and Memory Errors Check:"
 
@@ -301,4 +158,7 @@ cmp_valgrind_output medium
 cmp_valgrind_output invalid7
 cmp_valgrind_output invalid7-1
 cmp_valgrind_output invalid2-5
+cmp_valgrind_output invalid8
+cmp_valgrind_output invalid8-1
+cmp_valgrind_output invalid8-2
 
