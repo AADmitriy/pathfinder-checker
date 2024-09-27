@@ -15,6 +15,8 @@ or
 
 `./test.sh`
 
+# Output
+
 If no errors were found you will see short messages like "Error output matches.", "Output matches.", "No leaks".
 
 ### In case of errors with error output you will see:
