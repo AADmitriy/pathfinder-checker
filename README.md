@@ -31,4 +31,9 @@ If no errors were found you will see short messages like "Error output matches."
 ### In case of memory errors or leaks you will see:
 1. Input filename
 
+# Test cases
+Test cases from lms assesment: easy, medium, hard, hardest
+
+Test cases for load resistance check: medium_load_level, big
+
 All files in this repository are free to copy and reuse
