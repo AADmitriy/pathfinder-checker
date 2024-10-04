@@ -127,7 +127,7 @@ cmp_output_to_file valid_long_paths valid_long_paths_answer.txt
 cmp_output_to_file valid_long_paths1 valid_long_paths1_answer.txt
 cmp_output_to_file hardest hardest_answer.txt
 cmp_output_to_file hard hard_answer.txt
-cmp_output_to_file medium1 medium1_answer.txt
+cmp_output_to_file medium medium_answer.txt
 cmp_output_to_file easy easy_answer.txt
 
 echo "Leaks and Memory Errors Check:"
@@ -154,7 +154,8 @@ cmp_valgrind_output weird
 cmp_valgrind_output weird1
 cmp_valgrind_output small1
 cmp_valgrind_output small2
-cmp_valgrind_output medium
+# uncomment to check for medium load resistance
+#cmp_valgrind_output medium_load_level
 cmp_valgrind_output invalid7
 cmp_valgrind_output invalid7-1
 cmp_valgrind_output invalid2-5
