@@ -151,7 +151,8 @@ cmp_valgrind_output invalid_long_num1
 cmp_valgrind_output invalid-small
 cmp_valgrind_output path 
 cmp_valgrind_output weird
-cmp_valgrind_output weird1
+# uncomment to check for load resistance
+#cmp_valgrind_output weird1
 cmp_valgrind_output small1
 cmp_valgrind_output small2
 # uncomment to check for medium load resistance
