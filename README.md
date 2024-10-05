@@ -34,6 +34,6 @@ If no errors were found you will see short messages like "Error output matches."
 # Test cases
 Test cases from lms assesment: easy, medium, hard, hardest
 
-Test cases for load resistance check: medium_load_level, big
+Test cases for load resistance check: medium_load_level, big, weird, weird1
 
 All files in this repository are free to copy and reuse
