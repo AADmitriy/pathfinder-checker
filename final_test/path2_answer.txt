@@ -1,0 +1,340 @@
+========================================
+Path: Luna -> Nova
+Route: Luna -> Nova
+Distance: 1
+========================================
+========================================
+Path: Luna -> Orion
+Route: Luna -> Nova -> Orion
+Distance: 1 + 4 = 5
+========================================
+========================================
+Path: Luna -> Vega
+Route: Luna -> Nova -> Orion -> Vega
+Distance: 1 + 4 + 2 = 7
+========================================
+========================================
+Path: Luna -> Atlas
+Route: Luna -> Nova -> Orion -> Vega -> Atlas
+Distance: 1 + 4 + 2 + 3 = 10
+========================================
+========================================
+Path: Luna -> Phoenix
+Route: Luna -> Nova -> Orion -> Vega -> Atlas -> Phoenix
+Distance: 1 + 4 + 2 + 3 + 6 = 16
+========================================
+========================================
+Path: Luna -> Phoenix
+Route: Luna -> Draco -> Cygnus -> Phoenix
+Distance: 3 + 8 + 5 = 16
+========================================
+========================================
+Path: Luna -> Cygnus
+Route: Luna -> Draco -> Cygnus
+Distance: 3 + 8 = 11
+========================================
+========================================
+Path: Luna -> Draco
+Route: Luna -> Draco
+Distance: 3
+========================================
+========================================
+Path: Luna -> Lyra
+Route: Luna -> Nova -> Orion -> Vega -> Lyra
+Distance: 1 + 4 + 2 + 7 = 14
+========================================
+========================================
+Path: Luna -> Cetus
+Route: Luna -> Nova -> Orion -> Vega -> Atlas -> Cetus
+Distance: 1 + 4 + 2 + 3 + 4 = 14
+========================================
+========================================
+Path: Luna -> Lupus
+Route: Luna -> Nova -> Orion -> Hydra -> Lupus
+Distance: 1 + 4 + 1 + 5 = 11
+========================================
+========================================
+Path: Luna -> Hydra
+Route: Luna -> Nova -> Orion -> Hydra
+Distance: 1 + 4 + 1 = 6
+========================================
+========================================
+Path: Nova -> Orion
+Route: Nova -> Orion
+Distance: 4
+========================================
+========================================
+Path: Nova -> Vega
+Route: Nova -> Orion -> Vega
+Distance: 4 + 2 = 6
+========================================
+========================================
+Path: Nova -> Atlas
+Route: Nova -> Orion -> Vega -> Atlas
+Distance: 4 + 2 + 3 = 9
+========================================
+========================================
+Path: Nova -> Phoenix
+Route: Nova -> Orion -> Vega -> Atlas -> Phoenix
+Distance: 4 + 2 + 3 + 6 = 15
+========================================
+========================================
+Path: Nova -> Cygnus
+Route: Nova -> Luna -> Draco -> Cygnus
+Distance: 1 + 3 + 8 = 12
+========================================
+========================================
+Path: Nova -> Draco
+Route: Nova -> Luna -> Draco
+Distance: 1 + 3 = 4
+========================================
+========================================
+Path: Nova -> Lyra
+Route: Nova -> Orion -> Vega -> Lyra
+Distance: 4 + 2 + 7 = 13
+========================================
+========================================
+Path: Nova -> Cetus
+Route: Nova -> Orion -> Vega -> Atlas -> Cetus
+Distance: 4 + 2 + 3 + 4 = 13
+========================================
+========================================
+Path: Nova -> Lupus
+Route: Nova -> Orion -> Hydra -> Lupus
+Distance: 4 + 1 + 5 = 10
+========================================
+========================================
+Path: Nova -> Hydra
+Route: Nova -> Orion -> Hydra
+Distance: 4 + 1 = 5
+========================================
+========================================
+Path: Orion -> Vega
+Route: Orion -> Vega
+Distance: 2
+========================================
+========================================
+Path: Orion -> Atlas
+Route: Orion -> Vega -> Atlas
+Distance: 2 + 3 = 5
+========================================
+========================================
+Path: Orion -> Phoenix
+Route: Orion -> Vega -> Atlas -> Phoenix
+Distance: 2 + 3 + 6 = 11
+========================================
+========================================
+Path: Orion -> Cygnus
+Route: Orion -> Nova -> Luna -> Draco -> Cygnus
+Distance: 4 + 1 + 3 + 8 = 16
+========================================
+========================================
+Path: Orion -> Cygnus
+Route: Orion -> Vega -> Atlas -> Phoenix -> Cygnus
+Distance: 2 + 3 + 6 + 5 = 16
+========================================
+========================================
+Path: Orion -> Draco
+Route: Orion -> Nova -> Luna -> Draco
+Distance: 4 + 1 + 3 = 8
+========================================
+========================================
+Path: Orion -> Lyra
+Route: Orion -> Vega -> Lyra
+Distance: 2 + 7 = 9
+========================================
+========================================
+Path: Orion -> Cetus
+Route: Orion -> Vega -> Atlas -> Cetus
+Distance: 2 + 3 + 4 = 9
+========================================
+========================================
+Path: Orion -> Lupus
+Route: Orion -> Hydra -> Lupus
+Distance: 1 + 5 = 6
+========================================
+========================================
+Path: Orion -> Hydra
+Route: Orion -> Hydra
+Distance: 1
+========================================
+========================================
+Path: Vega -> Atlas
+Route: Vega -> Atlas
+Distance: 3
+========================================
+========================================
+Path: Vega -> Phoenix
+Route: Vega -> Atlas -> Phoenix
+Distance: 3 + 6 = 9
+========================================
+========================================
+Path: Vega -> Cygnus
+Route: Vega -> Atlas -> Phoenix -> Cygnus
+Distance: 3 + 6 + 5 = 14
+========================================
+========================================
+Path: Vega -> Draco
+Route: Vega -> Orion -> Nova -> Luna -> Draco
+Distance: 2 + 4 + 1 + 3 = 10
+========================================
+========================================
+Path: Vega -> Lyra
+Route: Vega -> Lyra
+Distance: 7
+========================================
+========================================
+Path: Vega -> Cetus
+Route: Vega -> Atlas -> Cetus
+Distance: 3 + 4 = 7
+========================================
+========================================
+Path: Vega -> Lupus
+Route: Vega -> Orion -> Hydra -> Lupus
+Distance: 2 + 1 + 5 = 8
+========================================
+========================================
+Path: Vega -> Hydra
+Route: Vega -> Orion -> Hydra
+Distance: 2 + 1 = 3
+========================================
+========================================
+Path: Atlas -> Phoenix
+Route: Atlas -> Phoenix
+Distance: 6
+========================================
+========================================
+Path: Atlas -> Cygnus
+Route: Atlas -> Phoenix -> Cygnus
+Distance: 6 + 5 = 11
+========================================
+========================================
+Path: Atlas -> Draco
+Route: Atlas -> Vega -> Orion -> Nova -> Luna -> Draco
+Distance: 3 + 2 + 4 + 1 + 3 = 13
+========================================
+========================================
+Path: Atlas -> Lyra
+Route: Atlas -> Cetus -> Lyra
+Distance: 4 + 2 = 6
+========================================
+========================================
+Path: Atlas -> Cetus
+Route: Atlas -> Cetus
+Distance: 4
+========================================
+========================================
+Path: Atlas -> Lupus
+Route: Atlas -> Vega -> Orion -> Hydra -> Lupus
+Distance: 3 + 2 + 1 + 5 = 11
+========================================
+========================================
+Path: Atlas -> Hydra
+Route: Atlas -> Vega -> Orion -> Hydra
+Distance: 3 + 2 + 1 = 6
+========================================
+========================================
+Path: Phoenix -> Cygnus
+Route: Phoenix -> Cygnus
+Distance: 5
+========================================
+========================================
+Path: Phoenix -> Draco
+Route: Phoenix -> Cygnus -> Draco
+Distance: 5 + 8 = 13
+========================================
+========================================
+Path: Phoenix -> Lyra
+Route: Phoenix -> Atlas -> Cetus -> Lyra
+Distance: 6 + 4 + 2 = 12
+========================================
+========================================
+Path: Phoenix -> Cetus
+Route: Phoenix -> Atlas -> Cetus
+Distance: 6 + 4 = 10
+========================================
+========================================
+Path: Phoenix -> Lupus
+Route: Phoenix -> Lupus
+Distance: 6
+========================================
+========================================
+Path: Phoenix -> Hydra
+Route: Phoenix -> Lupus -> Hydra
+Distance: 6 + 5 = 11
+========================================
+========================================
+Path: Cygnus -> Draco
+Route: Cygnus -> Draco
+Distance: 8
+========================================
+========================================
+Path: Cygnus -> Lyra
+Route: Cygnus -> Phoenix -> Atlas -> Cetus -> Lyra
+Distance: 5 + 6 + 4 + 2 = 17
+========================================
+========================================
+Path: Cygnus -> Cetus
+Route: Cygnus -> Phoenix -> Atlas -> Cetus
+Distance: 5 + 6 + 4 = 15
+========================================
+========================================
+Path: Cygnus -> Lupus
+Route: Cygnus -> Phoenix -> Lupus
+Distance: 5 + 6 = 11
+========================================
+========================================
+Path: Cygnus -> Hydra
+Route: Cygnus -> Phoenix -> Lupus -> Hydra
+Distance: 5 + 6 + 5 = 16
+========================================
+========================================
+Path: Draco -> Lyra
+Route: Draco -> Luna -> Nova -> Orion -> Vega -> Lyra
+Distance: 3 + 1 + 4 + 2 + 7 = 17
+========================================
+========================================
+Path: Draco -> Cetus
+Route: Draco -> Luna -> Nova -> Orion -> Vega -> Atlas -> Cetus
+Distance: 3 + 1 + 4 + 2 + 3 + 4 = 17
+========================================
+========================================
+Path: Draco -> Lupus
+Route: Draco -> Luna -> Nova -> Orion -> Hydra -> Lupus
+Distance: 3 + 1 + 4 + 1 + 5 = 14
+========================================
+========================================
+Path: Draco -> Hydra
+Route: Draco -> Luna -> Nova -> Orion -> Hydra
+Distance: 3 + 1 + 4 + 1 = 9
+========================================
+========================================
+Path: Lyra -> Cetus
+Route: Lyra -> Cetus
+Distance: 2
+========================================
+========================================
+Path: Lyra -> Lupus
+Route: Lyra -> Vega -> Orion -> Hydra -> Lupus
+Distance: 7 + 2 + 1 + 5 = 15
+========================================
+========================================
+Path: Lyra -> Hydra
+Route: Lyra -> Vega -> Orion -> Hydra
+Distance: 7 + 2 + 1 = 10
+========================================
+========================================
+Path: Cetus -> Lupus
+Route: Cetus -> Atlas -> Vega -> Orion -> Hydra -> Lupus
+Distance: 4 + 3 + 2 + 1 + 5 = 15
+========================================
+========================================
+Path: Cetus -> Hydra
+Route: Cetus -> Atlas -> Vega -> Orion -> Hydra
+Distance: 4 + 3 + 2 + 1 = 10
+========================================
+========================================
+Path: Lupus -> Hydra
+Route: Lupus -> Hydra
+Distance: 5
+========================================

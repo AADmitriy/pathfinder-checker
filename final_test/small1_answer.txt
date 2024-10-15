@@ -1,0 +1,15 @@
+========================================
+Path: Greenland -> Bananal
+Route: Greenland -> Bananal
+Distance: 8
+========================================
+========================================
+Path: Greenland -> Fraser
+Route: Greenland -> Fraser
+Distance: 10
+========================================
+========================================
+Path: Bananal -> Fraser
+Route: Bananal -> Fraser
+Distance: 3
+========================================
