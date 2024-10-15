@@ -129,6 +129,7 @@ cmp_output_to_file hardest hardest_answer.txt
 cmp_output_to_file hard hard_answer.txt
 cmp_output_to_file medium medium_answer.txt
 cmp_output_to_file easy easy_answer.txt
+cmp_output_to_file path2 path2_answer.txt
 
 echo "Leaks and Memory Errors Check:"
 
@@ -163,4 +164,5 @@ cmp_valgrind_output invalid2-5
 cmp_valgrind_output invalid8
 cmp_valgrind_output invalid8-1
 cmp_valgrind_output invalid8-2
+cmp_valgrind_output path2
 
