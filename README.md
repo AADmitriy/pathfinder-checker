@@ -37,3 +37,12 @@ Test cases from lms assesment: easy, medium, hard, hardest
 Test cases for load resistance check: medium_load_level, big, weird, weird1
 
 All files in this repository are free to copy and reuse
+
+# 👑👑👑Сontributors👑👑👑:
+[Vpavlenko](https://github.com/pvlvld)'s code was employed to produce correct responses for certain examinations. Also, I was instructed about the rightness of specific test cases by him.
+
+Snazarenko's code was employed for validating the accuracy of the produced responses. Additionally, he developed the path2 test.
+
+OAdamenko identified files with incorrect formats and noted the absence of others.
+
+[Rosinnii](https://github.com/Corkerro) identified a set of files that were unyielding to specific pathfinder implementations. Also, he taught me about the significant differences between LF and CRLF files.
