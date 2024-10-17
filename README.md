@@ -43,6 +43,6 @@ All files in this repository are free to copy and reuse
 
 Snazarenko's code was employed for validating the accuracy of the produced responses. Additionally, he developed the path2 test.
 
-OAdamenko identified files with incorrect formats and noted the absence of others.
+[OAdamenko](https://github.com/OleksandraAdamenk0) identified files with incorrect formats and noted the absence of others.
 
 [Rosinnii](https://github.com/Corkerro) identified a set of files that were unyielding to specific pathfinder implementations. Also, he taught me about the significant differences between LF and CRLF files.
